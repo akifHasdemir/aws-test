@@ -1,0 +1,16 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Elastic Beanstalk
+        uses: aws-actions/elastic-beanstalk-deploy@v1
+        with:
+          environment-name: aws-test-env # Bu kısmı çevrenizin adıyla değiştirin
+          application-name: aws-test
