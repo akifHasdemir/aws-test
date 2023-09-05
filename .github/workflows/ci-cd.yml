@@ -12,5 +12,5 @@ jobs:
       - name: Deploy to Elastic Beanstalk
         uses: aws-actions/elastic-beanstalk-deploy@v1
         with:
-          environment-name: aws-test-env # Bu kısmı çevrenizin adıyla değiştirin
+          environment-name: Aws-test-env
           application-name: aws-test
